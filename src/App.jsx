@@ -10,7 +10,7 @@ import Entry from "./components/Pages/Entry/Entry";
 function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Row>
         <Col lg={2} className="NavBar-Element">
           <NavigationBar />
@@ -18,7 +18,7 @@ function App() {
         <Col lg={10} className="NavBar-Element pt-3">
           <Entry />
         </Col>
-      </Row> */}
+      </Row>
       <History />
     </>
   );
