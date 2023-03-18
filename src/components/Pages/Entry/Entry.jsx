@@ -28,8 +28,7 @@ function Entry() {
     setFormFields([...formFields, object]);
   };
 
-  const removeFields = (index, e) => {
-    e.preventDefault();
+  const removeFields = (index) => {
     let data = [...formFields];
     data.splice(index, 1);
     setFormFields(data);
@@ -50,45 +49,36 @@ function Entry() {
           <Form.Label>Age</Form.Label>
           <Form.Control type="text" placeholder="Enter Your Age" />
         </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Prescription</Form.Label>
-          <div className="App">
-            <form onSubmit={submit}>
-              {formFields.map((form, index) => {
-                return (
-                  <div
-                    key={index}
-                    style={{
-                      gap: "2em",
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <input
-                      name="Prescription"
-                      placeholder="Prescription"
-                      onChange={(event) => handleFormChange(event, index)}
-                      value={form.prescription}
-                      style={{ borderRadius: "5px" }}
-                    />
-                    <input
-                      name="quantity"
-                      placeholder="quantity"
-                      onChange={(event) => handleFormChange(event, index)}
-                      value={form.quantity}
-                      style={{ borderRadius: "5px" }}
-                    />
-                    <button onClick={() => removeFields(index)}>Remove</button>
-                  </div>
-                );
-              })}
-            </form>
-            <button onClick={addFields}>Add More..</button>
-            <br />
-          </div>
-        </Form.Group>
-
+        <Form onSubmit={submit} className="Entry-form">
+          {formFields.map((form, index) => {
+            return (
+              <Form key={index} className="Entry-form">
+                <Form.Label style={{ marginTop: "20px" }}>
+                  Prescription
+                </Form.Label>
+                <Form.Control
+                  placeholder="Prescription"
+                  onChange={(event) => handleFormChange(event, index)}
+                  value={form.prescription}
+                />
+                <Form.Label> Quantity</Form.Label>
+                <Form.Control
+                  placeholder="quantity"
+                  onChange={(event) => handleFormChange(event, index)}
+                  value={form.quantity}
+                />
+                <br />
+                <Button onClick={() => removeFields(index)} clas>
+                  Remove
+                </Button>
+                <th />
+                <Button onClick={addFields}>Add More..</Button>
+                <br />
+              </Form>
+            );
+          })}
+        </Form>
+        <br />
         <Button variant="primary" type="submit" onClick={submit}>
           Submit
         </Button>
