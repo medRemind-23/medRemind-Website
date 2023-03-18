@@ -7,17 +7,16 @@
 
 }
 
-/* form{
+.Login-form{
     display: flex;
     flex-direction: column;
     height: 400px;
     width: 400px;
     align-items: center;
     margin: auto;
-    background-color: #00ff00;
-} */
+}
 
 .form-items{
     align-items: center;
-    padding: 20%;
+    margin-top: 50%;
 }
