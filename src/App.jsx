@@ -1,5 +1,5 @@
 import "./App.css";
-import Login from "./components/Pages/Entry/Login/Login";
+import Login from "./components/Pages/Login/Login";
 import NavigationBar from "./components/NavigationBar/NavigationBar.jsx";
 import Header from "./components/Header/Header.jsx";
 
