@@ -12,16 +12,6 @@ function App() {
   return (
     <>
       <Login />
-      {/* <Header />
-      <Row>
-        <Col lg={2} className="NavBar-Element">
-          <NavigationBar />
-        </Col>
-        <Col lg={10} className="NavBar-Element pt-3">
-          <Entry />
-        </Col>
-      </Row> */}
-      {/* <History /> */}
     </>
   );
 }

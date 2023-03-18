@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { FaUserAlt } from "react-icons/fa";
 
 function Header() {
   return (
@@ -18,7 +19,9 @@ function Header() {
           <Nav>
             <Nav.Link href="#deets">Logged in</Nav.Link>
             <Navbar.Text>
-              <a href="#login">Icon</a>
+              <a href="#login">
+                <FaUserAlt size={20} />
+              </a>
             </Navbar.Text>
           </Nav>
         </Navbar.Collapse>
