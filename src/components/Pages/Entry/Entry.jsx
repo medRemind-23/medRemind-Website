@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
+import FormGroup from "react-bootstrap/esm/FormGroup";
+import { MdDeleteOutline } from "react-icons/md";
+
 function Entry() {
   const [formFields, setFormFields] = useState([{ name: "", age: "" }]);
 
@@ -22,67 +25,90 @@ function Entry() {
     e.preventDefault();
     let object = {
       prescription: "",
-      quantity: "",
+      duration: "",
+      time: "",
     };
 
     setFormFields([...formFields, object]);
   };
 
   const removeFields = (index) => {
-    let data = [...formFields];
-    data.splice(index, 1);
-    setFormFields(data);
+    const len = formFields.length;
+    if (len > 1) {
+      let data = [...formFields];
+      data.splice(index, 1);
+      setFormFields(data);
+    }
   };
 
   return (
-    <Col className="p-2" lg={4}>
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter Your Name" />
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Male" />
+    <Col className="form-input p-2">
+      <div className="Pateient-detail">
+        <div className="Pateient-detail-1">
+          <Form.Group className="Pateient-detail-name" controlId="">
+            <Form.Control type="text" placeholder="Enter Your Name" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Female" />
+          <Form.Group className="Pateient-detail-name" controlId="">
+            <Form.Control type="text" placeholder="Enter Your Name" />
           </Form.Group>
-          <Form.Label>Age</Form.Label>
-          <Form.Control type="text" placeholder="Enter Your Age" />
-        </Form.Group>
-        <Form onSubmit={submit} className="Entry-form">
-          {formFields.map((form, index) => {
-            return (
-              <Form key={index} className="Entry-form">
-                <Form.Label style={{ marginTop: "20px" }}>
-                  Prescription
-                </Form.Label>
+        </div>
+
+        {formFields.map((form, index) => {
+          return (
+            <Form
+              key={index}
+              style={{ marginTop: "20px" }}
+              className="Pateient-medicine-detail"
+            >
+              <FormGroup>
                 <Form.Control
                   placeholder="Prescription"
                   onChange={(event) => handleFormChange(event, index)}
                   value={form.prescription}
                 />
-                <Form.Label> Quantity</Form.Label>
+              </FormGroup>
+              <FormGroup>
                 <Form.Control
-                  placeholder="quantity"
+                  placeholder="Duration"
                   onChange={(event) => handleFormChange(event, index)}
-                  value={form.quantity}
+                  value={form.duration}
                 />
-                <br />
-                <Button onClick={() => removeFields(index)} clas>
-                  Remove
-                </Button>
-                <th />
-                <Button onClick={addFields}>Add More..</Button>
-                <br />
-              </Form>
-            );
-          })}
-        </Form>
+              </FormGroup>
+              <FormGroup>
+                <Form.Control
+                  placeholder="Time"
+                  onChange={(event) => handleFormChange(event, index)}
+                  value={form.time}
+                />
+              </FormGroup>
+              <br />
+              <Button
+                onClick={() => removeFields(index)}
+                className="Remove-button"
+                // style={{ marginTop: "10px" }}
+              >
+                <MdDeleteOutline />
+              </Button>
+            </Form>
+          );
+        })}
+        <div
+          className="Entry-button"
+          style={{ marginTop: "20px", color: "#fff" }}
+        >
+          <Button
+            variant="primary"
+            type="submit"
+            onClick={submit}
+            className="submit-button"
+          >
+            Submit
+          </Button>
+          <Button onClick={addFields}>Add More..</Button>
+        </div>
+
         <br />
-        <Button variant="primary" type="submit" onClick={submit}>
-          Submit
-        </Button>
-      </Form>
+      </div>
     </Col>
   );
 }

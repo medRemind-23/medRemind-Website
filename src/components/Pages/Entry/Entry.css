@@ -1,5 +1,50 @@
-.Entry-form {
-  display: 'flex';
-  gap: '2em';
+.form-input {
+  width: 100%;
+}
+.Pateient-detail {
+  display: flex;
+  width: 70%;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  background-color: #1ebfc4;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.Pateient-detail-1 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Pateient-medicine-detail {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 59px;
+}
+.Entry-button {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  height: 50px;
+}
+.Pateient-detail-name {
+  width: 40%;
+}
+
+.Remove-button {
+  height: 35px;
+}
+
+.form-control {
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 40px;
 }
