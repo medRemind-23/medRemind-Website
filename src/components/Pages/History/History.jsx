@@ -25,12 +25,16 @@ function History() {
       name: "Abin",
       prescription: "ghasfdfashdjadh",
     },
+    {
+      name: "Abin",
+      prescription: "ghasfdfashdjadh",
+    },
   ]);
   // const dataset = Data.map((data, index) => {
   //   console.log(data);
   return (
     <>
-      <Row xs={1} md={2} className="g-4">
+      <Row xs={1} md={3} className="g-1">
         {Data.map((data, index) => (
           <Col>
             <Card>
