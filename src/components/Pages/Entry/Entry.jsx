@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Entry.css";
+import "./Entry.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
