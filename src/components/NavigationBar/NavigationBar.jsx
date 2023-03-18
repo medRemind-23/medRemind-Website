@@ -8,16 +8,10 @@ import Col from "react-bootstrap/Col";
 function NavigationBar() {
   return (
     <>
-      <Stack gap={3} className="p-5">
-        <Col className="Nav-items active " lg="2">
-          Dashboard
-        </Col>
-        <Col className="Nav-items " lg="2" mp="5px">
-          Entry
-        </Col>
-        <Col className="Nav-items " lg="2" mp="5px">
-          My Entries
-        </Col>
+      <Stack gap={3} className="Nav-Container p-4 ">
+        <Col className="Nav-items active ">Dashboard</Col>
+        <Col className="Nav-items ">Entry</Col>
+        <Col className="Nav-items ">My Entries</Col>
       </Stack>
     </>
   );
