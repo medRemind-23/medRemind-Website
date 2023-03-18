@@ -4,7 +4,7 @@ import "./App.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar.jsx";
 import Header from "./components/Header/Header.jsx";
 import Row from "react-bootstrap/esm/Row";
-import History from "./components/History/History";
+import History from "./components/Pages/History/History.jsx";
 import Col from "react-bootstrap/Col";
 import Entry from "./components/Pages/Entry/Entry";
 
@@ -17,7 +17,7 @@ function App() {
           <NavigationBar />
         </Col>
         <Col ld={12}>
-          <Entry />
+          <History />
         </Col>
       </Row>
     </>
