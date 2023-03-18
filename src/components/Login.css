@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-form{
+.Login-form{
     display: flex;
     flex-direction: column;
     height: 400px;

@@ -8,7 +8,7 @@ function Login() {
   return (
     <>
       <div className="main-container">
-        <Form>
+        <Form className="Login-form">
           <div className="form-items">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Enter email" />
