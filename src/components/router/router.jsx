@@ -1,5 +1,9 @@
 import React from "react";
+x;
 import { Route, Routes } from "react-router-dom";
+import { Dashboard } from "";
+import { Entry } from "";
+import { MyEnteries } from "";
 
 function router() {
   return (
