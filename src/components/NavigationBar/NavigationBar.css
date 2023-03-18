@@ -1,0 +1,7 @@
+.Nav-Container {
+  gap: 2em;
+}
+
+.active {
+  color: blue !important ;
+}
