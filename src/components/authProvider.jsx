@@ -108,6 +108,11 @@ function AuthProvider({ children }) {
       .then(() => console.log("logout  successfull!"))
       .catch((e) => console.log(e));
   };
+  const change = () => {
+    onAuthStateChanged(auth, (user) => {
+      return user;
+    });
+  };
   return (
     <AuthContext.Provider
       value={{
@@ -116,6 +121,7 @@ function AuthProvider({ children }) {
         getData,
         SignOut,
         auth,
+        change,
       }}
     >
       {children}

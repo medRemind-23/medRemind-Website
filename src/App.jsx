@@ -6,25 +6,16 @@ import "./App.css";
 import AuthProvider, { AuthContext } from "./components/authProvider";
 import Router from "./components/router/Router";
 import Login from "./components/Pages/Login/Login";
+import Nav from "./components/Nav";
+import Dashboard from "./components/Pages/Dashboard/Dashboard";
+import SignUp from "./components/Pages/SignUp/SignUp";
 
 function App() {
-  const { auth } = useContext(AuthContext);
-  console.log(auth.currentUser);
-  if (auth.currentUser) {
-    return (
-      <AuthProvider>
-        <Router />
-      </AuthProvider>
-    );
-  } else {
-    return (
-      <>
-        <AuthProvider>
-          <Login />
-        </AuthProvider>
-      </>
-    );
-  }
+  return (
+    <AuthProvider>
+      <Login />
+    </AuthProvider>
+  );
 }
 
 export default App;
