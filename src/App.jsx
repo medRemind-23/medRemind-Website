@@ -7,12 +7,13 @@ import Row from "react-bootstrap/esm/Row";
 import History from "./components/History/History";
 import Col from "react-bootstrap/Col";
 import Entry from "./components/Pages/Entry/Entry";
-
+import AuthProvider from "./components/authProvider";
+import Router from "./components/router/Router";
 function App() {
   return (
-    <>
-      <Login />
-    </>
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   );
 }
 

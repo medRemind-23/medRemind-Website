@@ -1,18 +1,16 @@
 import React from "react";
-x;
 import { Route, Routes } from "react-router-dom";
-import { Dashboard } from "";
-import { Entry } from "";
-import { MyEnteries } from "";
-
-function router() {
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import Entry from "../Pages/Entry/Entry";
+// import MyEnteries from "../Pages/History";
+function Router() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/" element={<Entry />} />
-      <Route path="/" element={<MyEnteries />} />
+      <Route path="/Entry" element={<Entry />} />
+      {/* <Route path="/MyEnteries" element={<MyEnteries />} /> */}
     </Routes>
   );
 }
 
-export default router;
+export default Router;
