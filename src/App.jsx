@@ -19,7 +19,7 @@ function App() {
             <NavigationBar />
           </Col>
           <Col ld={12}>
-            <SignUp />
+            <Router />
           </Col>
         </Row>
       </AuthProvider>
