@@ -37,25 +37,29 @@ function Entry() {
     e.preventDefault();
     const obj = [
       {
-        Prescription1: pre1.current.value,
-        Duration1: duration1.current.value,
-        Time1: time1.current.value,
-
-        Prescription2: pre2.current.value,
-        Duration2: duration2.current.value,
-        Time2: time2.current.value,
-
-        Prescription3: pre3.current.value,
-        Duration3: duration3.current.value,
-        Time3: time3.current.value,
-
-        Prescription4: pre4.current.value,
-        Duration4: duration4.current.value,
-        Time4: time4.current.value,
-
-        Prescription5: pre5.current.value,
-        Duration5: duration5.current.value,
-        Time5: time5.current.value,
+        prescription: pre1.current.value,
+        duration: duration1.current.value,
+        time: time1.current.value,
+      },
+      {
+        prescription: pre2.current.value,
+        duration: duration2.current.value,
+        time: time2.current.value,
+      },
+      {
+        prescription: pre3.current.value,
+        duration: duration3.current.value,
+        time: time3.current.value,
+      },
+      {
+        prescription: pre4.current.value,
+        duration: duration4.current.value,
+        time: time4.current.value,
+      },
+      {
+        prescription: pre5.current.value,
+        duration: duration5.current.value,
+        time: time5.current.value,
       },
     ];
     getData(id.current.value, obj);

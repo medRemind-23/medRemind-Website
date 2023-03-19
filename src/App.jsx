@@ -7,6 +7,8 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/Col";
 import AuthProvider from "./components/authProvider";
 import Router from "./components/router/Router";
+import Login from "./components/Pages/Login/Login";
+import SignUp from "./components/Pages/SignUp/SignUp";
 function App() {
   return (
     <>
@@ -17,7 +19,7 @@ function App() {
             <NavigationBar />
           </Col>
           <Col ld={12}>
-            <Router />
+            <SignUp />
           </Col>
         </Row>
       </AuthProvider>

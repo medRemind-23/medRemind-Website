@@ -44,19 +44,29 @@ function AuthProvider({ children }) {
         onAuthStateChanged(auth, (user) => {
           if (user) {
             const uid = user.uid;
+            const id = 1000;
             console.log(uid);
             const Detailref = doc(db, "Patient", uid);
-
+            const prescriptionDetails = doc(db, "mapping", id.toString());
+            console.log(prescriptionDetails);
             setDoc(Detailref, {
               email: Email,
             })
               .then(() => {
-                alert("data added");
+                // alert("data added");
+                setDoc(prescriptionDetails, {
+                  userid: uid,
+                })
+                  .then(() => {
+                    alert("data adds");
+                  })
+                  .catch((e) => {
+                    alert(e);
+                  });
               })
               .catch((e) => {
                 alert(e);
               });
-          } else {
           }
         });
       })

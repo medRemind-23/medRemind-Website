@@ -9,7 +9,7 @@ function SignUp() {
   const Password = useRef();
   const signUp = (e) => {
     const email = Email.current.value;
-    const password = Email.current.value;
+    const password = Password.current.value;
     e.preventDefault();
     firebaseSignUp(email, password);
   };
@@ -19,7 +19,7 @@ function SignUp() {
         <h1>Signup</h1>
         <Form
           className=" h-100 d-flex justify-content-center align-items-center Login_form"
-          onSubmit={firebaseSignUp}
+          onSubmit={signUp}
         >
           <div className="form-items">
             <Form.Group className="mb-3" controlId="formBasicEmail">
