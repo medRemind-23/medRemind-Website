@@ -14,19 +14,22 @@ function NavigationBar() {
     <>
       <Stack gap={3} className="Nav-Container p-4 ">
         <div className="Nav-Container-items">
-          <Col className=" active ">
+          <Col className="NavBar-items active ">
             <Link to="/">DashBoard</Link>
           </Col>
           <Col>
             <Link to="/Entry">Entry</Link>
           </Col>
-          <Col>
+          <Col className="NavBar-items">
             {" "}
             <Link to="/History">My Entry</Link>
           </Col>
 
-          <Col>
-            <button onClick={SignOut}> SignOut</button>
+          <Col className="NavBar-items">
+            <button onClick={SignOut} className="Signout-button">
+              {" "}
+              SignOut
+            </button>
           </Col>
         </div>
       </Stack>
