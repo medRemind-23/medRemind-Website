@@ -51,6 +51,23 @@ function Dashboard() {
             </Card.Body>
           </Card>
         </Col>
+        <Row className="Record-Contaier">
+          <Col>
+            <Card className="card-down">
+              <Card.Body className="card-down-inside">Med1</Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card className="card-down">
+              <Card.Body className="card-down-inside">Med2</Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card className="card-down">
+              <Card.Body className="card-down-inside">Med3</Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Row>
     </>
   );
