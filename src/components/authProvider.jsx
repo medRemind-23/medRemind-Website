@@ -7,7 +7,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, setDoc, doc } from "firebase/firestore";
+import { getFirestore, setDoc, doc, getDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 export const AuthContext = createContext();
 function AuthProvider({ children }) {
@@ -44,7 +44,7 @@ function AuthProvider({ children }) {
         onAuthStateChanged(auth, (user) => {
           if (user) {
             const uid = user.uid;
-            const id = 1000;
+            let id = 1000;
             console.log(uid);
             const Detailref = doc(db, "Patient", uid);
             const prescriptionDetails = doc(db, "mapping", id.toString());
@@ -76,8 +76,31 @@ function AuthProvider({ children }) {
   };
 
   const getData = (id, Obj) => {
-    console.log(id);
-    console.log(Obj);
+    // console.log(id);
+    // console.log(Obj);
+    const DocRef = doc(db, "mapping", id);
+    const DocSnaps = getDoc(DocRef)
+      .then((res) => {
+        console.log("data is   :", res.data().userid);
+        const uid = res.data().userid;
+        const PatientRef = doc(db, "Patient", uid);
+        const patientData = getDoc(PatientRef).then((Val) => {
+          console.log(Val.data());
+          const DataPut = doc(db, "Patient", uid);
+          console.log(values);
+          setDoc(DataPut, {
+            Email: Val.data().Email,
+            Medicalinfo: Obj,
+          })
+            .then(() => {
+              console.log("Data added");
+            })
+            .catch((e) => console.log(e));
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
   return (
     <AuthContext.Provider
