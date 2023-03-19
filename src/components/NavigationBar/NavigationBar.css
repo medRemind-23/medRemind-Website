@@ -1,5 +1,6 @@
 .active {
   color: blue !important ;
+  height: 20px;
 }
 .Nav-Container {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -11,6 +12,13 @@
 .Nav-Container-items {
   display: flex;
   flex-direction: column;
-  gap: 2em;
-  gap: 2em;
+  height: 100%;
+}
+
+/* .Signout-button {
+  margin-top: 100px;
+} */
+
+.NavBar-items {
+  height: 20vh;
 }
