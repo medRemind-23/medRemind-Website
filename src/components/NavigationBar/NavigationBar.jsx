@@ -9,9 +9,11 @@ function NavigationBar() {
   return (
     <>
       <Stack gap={3} className="Nav-Container p-4 ">
-        <Col className="Nav-items active ">Dashboard</Col>
-        <Col className="Nav-items ">Entry</Col>
-        <Col className="Nav-items ">My Entries</Col>
+        <div className="Nav-Container-items">
+          <Col className=" active ">Dashboard</Col>
+          <Col>Entry</Col>
+          <Col>My Entries</Col>
+        </div>
       </Stack>
     </>
   );
