@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -9,6 +9,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { getFirestore, setDoc, doc, getDoc } from "firebase/firestore";
+
 // TODO: Add SDKs for Firebase products that you want to use
 export const AuthContext = createContext();
 function AuthProvider({ children }) {
@@ -21,6 +22,7 @@ function AuthProvider({ children }) {
     appId: "1:125022898851:web:30c07ef6d0f14ec12ecd16",
     measurementId: "G-Z3C8F2S554",
   };
+  const history = useNavigate();
   const app = initializeApp(firebaseConfig);
   const auth = getAuth();
 
@@ -31,6 +33,7 @@ function AuthProvider({ children }) {
       .then((success) => {
         alert("success");
         console.log(success);
+        history("/Dashboard");
       })
       .catch((err) => {
         alert("invalid");
@@ -42,6 +45,7 @@ function AuthProvider({ children }) {
     createUserWithEmailAndPassword(auth, Email, password)
       .then(() => {
         console.log("successfull");
+        history.push("/");
         onAuthStateChanged(auth, (user) => {
           if (user) {
             const uid = user.uid;
@@ -105,13 +109,10 @@ function AuthProvider({ children }) {
   };
   const SignOut = () => {
     signOut(auth)
-      .then(() => console.log("logout  successfull!"))
+      .then(() => {
+        console.log("logout  successfull!");
+      })
       .catch((e) => console.log(e));
-  };
-  const change = () => {
-    onAuthStateChanged(auth, (user) => {
-      return user;
-    });
   };
   return (
     <AuthContext.Provider
@@ -121,7 +122,6 @@ function AuthProvider({ children }) {
         getData,
         SignOut,
         auth,
-        change,
       }}
     >
       {children}
