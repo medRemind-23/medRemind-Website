@@ -112,9 +112,20 @@ function Entry() {
             <FormGroup>
               <Form.Control placeholder="Duration" ref={duration1} />
             </FormGroup>
-            <FormGroup>
-              <Form.Control placeholder="Time" ref={time1} />
-            </FormGroup>
+            <Form.Select
+              aria-label="Default select example"
+              ref={time1}
+              style={{ width: "30%", height: "100%" }}
+            >
+              <option hidden>Time</option>
+              <option value="1">Morning</option>
+              <option value="2">Noon</option>
+              <option value="3">Night</option>
+              <option value="4">Morning Noon</option>
+              <option value="5">Morning Night</option>
+              <option value="6">Noon Night</option>
+              <option value="7">Morning Noon Night </option>
+            </Form.Select>
             <br />
             <Button
               className="Remove-button"
@@ -133,9 +144,21 @@ function Entry() {
             <FormGroup>
               <Form.Control placeholder="Duration" ref={duration2} />
             </FormGroup>
-            <FormGroup>
-              <Form.Control placeholder="Time" ref={time2} />
-            </FormGroup>
+            <Form.Select
+              aria-label="Default select example"
+              ref={time2}
+              style={{ width: "30%", height: "100%" }}
+            >
+              <option hidden>Time</option>
+              <option value="1">Morning</option>
+              <option value="2">Noon</option>
+              <option value="3">Night</option>
+              <option value="4">Morning Noon</option>
+              <option value="5">Morning Night</option>
+              <option value="6">Noon Night</option>
+              <option value="7">Morning Noon Night </option>
+            </Form.Select>
+
             <br />
             <Button
               className="Remove-button"
@@ -154,9 +177,20 @@ function Entry() {
             <FormGroup>
               <Form.Control placeholder="Duration" ref={duration3} />
             </FormGroup>
-            <FormGroup>
-              <Form.Control placeholder="Time" ref={time3} />
-            </FormGroup>
+            <Form.Select
+              aria-label="Default select example"
+              ref={time3}
+              style={{ width: "30%", height: "100%" }}
+            >
+              <option hidden>Time</option>
+              <option value="1">Morning</option>
+              <option value="2">Noon</option>
+              <option value="3">Night</option>
+              <option value="4">Morning Noon</option>
+              <option value="5">Morning Night</option>
+              <option value="6">Noon Night</option>
+              <option value="7">Morning Noon Night </option>
+            </Form.Select>
             <br />
             <Button
               className="Remove-button"
@@ -175,9 +209,20 @@ function Entry() {
             <FormGroup>
               <Form.Control placeholder="Duration" ref={duration4} />
             </FormGroup>
-            <FormGroup>
-              <Form.Control placeholder="Time" ref={time4} />
-            </FormGroup>
+            <Form.Select
+              aria-label="Default select example"
+              ref={time4}
+              style={{ width: "30%", height: "100%" }}
+            >
+              <option hidden>Time</option>
+              <option value="1">Morning</option>
+              <option value="2">Noon</option>
+              <option value="3">Night</option>
+              <option value="4">Morning Noon</option>
+              <option value="5">Morning Night</option>
+              <option value="6">Noon Night</option>
+              <option value="7">Morning Noon Night </option>
+            </Form.Select>
             <br />
             <Button
               className="Remove-button"
@@ -196,9 +241,20 @@ function Entry() {
             <FormGroup>
               <Form.Control placeholder="Duration" ref={duration5} />
             </FormGroup>
-            <FormGroup>
-              <Form.Control placeholder="Time" ref={time5} />
-            </FormGroup>
+            <Form.Select
+              aria-label="Default select example"
+              ref={time5}
+              style={{ width: "30%", height: "100%" }}
+            >
+              <option hidden>Time</option>
+              <option value="1">Morning</option>
+              <option value="2">Noon</option>
+              <option value="3">Night</option>
+              <option value="4">Morning Noon</option>
+              <option value="5">Morning Night</option>
+              <option value="6">Noon Night</option>
+              <option value="7">Morning Noon Night </option>
+            </Form.Select>
             <br />
             <Button
               className="Remove-button"

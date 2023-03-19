@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import { getFirestore, setDoc, doc, getDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -102,12 +103,18 @@ function AuthProvider({ children }) {
         console.log(e);
       });
   };
+  const SignOut = () => {
+    signOut(auth)
+      .then(() => console.log("logout  successfull!"))
+      .catch((e) => console.log(e));
+  };
   return (
     <AuthContext.Provider
       value={{
         FireBaseLogin,
         firebaseSignUp,
         getData,
+        SignOut,
       }}
     >
       {children}
