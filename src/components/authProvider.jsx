@@ -115,6 +115,7 @@ function AuthProvider({ children }) {
         firebaseSignUp,
         getData,
         SignOut,
+        auth,
       }}
     >
       {children}

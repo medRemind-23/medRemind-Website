@@ -2,6 +2,7 @@ import React, { useRef, useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import AuthProvider, { AuthContext } from "../../authProvider";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
@@ -18,7 +19,7 @@ function Login() {
         <h1>Login</h1>
         <Form
           className=" h-100 d-flex justify-content-center align-items-center Login_form"
-          onSubmit={logIn }
+          onSubmit={logIn}
         >
           <div className="form-items">
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -43,6 +44,7 @@ function Login() {
             <Button variant="primary" type="submit">
               Submit
             </Button>
+            <Link to="/Signup"> Signup</Link>
           </div>
         </Form>
       </div>
